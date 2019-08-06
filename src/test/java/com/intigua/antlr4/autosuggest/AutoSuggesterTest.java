@@ -1,12 +1,5 @@
 package com.intigua.antlr4.autosuggest;
 
-import static org.hamcrest.Matchers.containsInAnyOrder;
-import static org.junit.Assert.assertThat;
-import static com.intigua.antlr4.autosuggest.CasePreference.*;
-
-import java.util.Arrays;
-import java.util.Collection;
-
 import org.antlr.runtime.RecognitionException;
 import org.antlr.v4.runtime.CharStream;
 import org.antlr.v4.runtime.Lexer;
@@ -20,6 +13,13 @@ import org.junit.Test;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import java.util.Arrays;
+import java.util.Collection;
+
+import static com.intigua.antlr4.autosuggest.CasePreference.*;
+import static org.hamcrest.Matchers.containsInAnyOrder;
+import static org.junit.Assert.assertThat;
+
 public class AutoSuggesterTest {
 
     private final static String DEFAULT_LOG_LEVEL = "WARN";
@@ -29,9 +29,9 @@ public class AutoSuggesterTest {
 
     @BeforeClass
     public static void initLogging() {
-        System.setProperty(org.slf4j.impl.SimpleLogger.DEFAULT_LOG_LEVEL_KEY, DEFAULT_LOG_LEVEL);
-        System.setProperty(org.slf4j.impl.SimpleLogger.SHOW_LOG_NAME_KEY, "false");
-        System.setProperty(org.slf4j.impl.SimpleLogger.SHOW_THREAD_NAME_KEY, "false");
+       // System.setProperty(org.slf4j.impl.SimpleLogger.DEFAULT_LOG_LEVEL_KEY, DEFAULT_LOG_LEVEL);
+       // System.setProperty(org.slf4j.impl.SimpleLogger.SHOW_LOG_NAME_KEY, "false");
+       // System.setProperty(org.slf4j.impl.SimpleLogger.SHOW_THREAD_NAME_KEY, "false");
     }
 
     @Test
